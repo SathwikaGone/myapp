@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Interactive App</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <main class="container-fluid">
+
+    <h1>JavaScript for interactive apps!</h1>
+    <h3>Area Calculator</h3>
+
+    <p>Enter the radius:
+      <input id="guest" type="number" value="Number">
+    </p>
+    <button id="clicker" class="btn btn-primary">Click me!</button>
+
+    <p id="result"></p>
+
+  </main>
+
+  <script>
+    console.log("SCRIPT START")
+    console.log("Declare functions..............................")
+    function radius(x) {
+      return Math.PI*x * x
+    }
+    console.log("radius=" + radius)
+    console.log("Declare event listeners .......................")
+    document.addEventListener("dblclick", function () {
+      console.log("radius(x)=" + radius(x))
+    })
+    document.getElementById("clicker").addEventListener("click", function () {
+    
+      const i = parseInt(document.getElementById("guest").value)
+      console.log("x=" + i)
+    
+      const ans =  " your radius is " + radius(i) + "."
+      document.getElementById("result").innerHTML = ans
+    })
+    console.log("SCRIPT END")
+  </script>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/js/mdb.min.js"></script>
+</body>
+
+</html>
